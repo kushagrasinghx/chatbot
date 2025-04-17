@@ -9,16 +9,15 @@ function App() {
   const [answer, setAnswer] = useState("")
 
   async function generateAnswer() {
+    console.log("API Key:", import.meta.env.GEMINI_API_KEY);
     setAnswer('Generating answer...');
     const response = await axios({
-      url: 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyA5dK4mAwleXTogVtUUgmI150tsyweKD50',
+      url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${import.meta.env.VITE_GEMINI_API_KEY}`,
       method: 'POST',
       data: {
-        "contents": [{
-          "parts":[{"text": question}]
-        }],
+        contents: [{ parts: [{ text: question }] }],
       },
-    })
+    });
 
     setAnswer(response['data']['candidates'][0]['content']['parts'][0]['text']);
   }
