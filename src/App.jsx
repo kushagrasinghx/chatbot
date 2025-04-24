@@ -22,7 +22,14 @@ function App() {
 
   return (
     <>
-    <div className="main flex flex-col items-center justify-center h-screen px-[10%]">
+    <nav className='navbar flex items-center justify-between h-20 w-screen px-[10%] bg-[#141414] fixed text-white'>
+      <div className="text-left">Gemini API Chatbot</div>
+      <div className="text-right">
+        <div className="powered-text">Powered by</div>
+        <div className="powered-logo"></div>
+      </div>
+    </nav>
+    <div className="main flex flex-col items-center justify-center h-screen px-[10%] bg-[#212121] text-white">
       <div className="navbar"></div>
       <textarea className='w-full' value={question} onChange={(event)=> setQuestion(event.target.value)} rows="10"></textarea>
       <button onClick={generateAnswer}>Generate Answer</button>
