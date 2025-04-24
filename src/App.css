@@ -1,0 +1,53 @@
+.response::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .response::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .response::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+  }
+  
+  .response::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.35);
+  }
+
+  .response::-webkit-scrollbar-thumb {
+    transition: background-color 0.3s ease;
+  }
+
+  .response {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+  }  
+
+  
+
+  .response-text {
+    white-space: pre-wrap; /* Ensures content wraps */
+    word-wrap: break-word; /* Prevents long words from overflowing */
+    color: #ccc; /* Light gray for the text */
+  }
+  
+  /* Bold text */
+  .bold {
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  /* Italic text */
+  .italic {
+    font-style: italic;
+    color: #ccc; /* Optional: Light color for italicized text */
+    font-size: 1.1em; /* Make italicized text slightly larger for emphasis */
+  }
+  
+  /* Underlined text */
+  .underline {
+    text-decoration: underline;
+    color: #1d9bf0; /* Optional: Set a color for underline */
+  }
+  
