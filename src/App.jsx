@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import axios from 'axios';
 import './App.css'
 
@@ -24,10 +22,12 @@ function App() {
 
   return (
     <>
-      <h1 className='text-3xl font-bold underline'>Chat AI</h1>
-      <textarea value={question} onChange={(event)=> setQuestion(event.target.value)} rows="10" cols="50"></textarea>
+    <div className="main flex flex-col items-center justify-center h-screen px-[10%]">
+      <div className="navbar"></div>
+      <textarea className='w-full' value={question} onChange={(event)=> setQuestion(event.target.value)} rows="10"></textarea>
       <button onClick={generateAnswer}>Generate Answer</button>
       <pre>{answer}</pre>
+    </div>
     </>
   )
 }
